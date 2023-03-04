@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Estilos.css">
+    <title>LISTA Y FORMULARIO</title>
+</head>
+<body style="background-color: #0496ff;">
+    <header>
+        <img src="../img/incap.jpeg" width="100" height="100" alt="incap">
+        <h1>LISTAS EN HTML</h1>
+        <!-- <H2>MENU NAVEGACION</H2> -->
+    </header>
+
+    <nav>
+        <ul>
+            <li type="disc" style="color: #ffff ;">HOME</li>
+            <li type="square" style="color: #ffff;">PRODUCTO</li>
+            <li type="circle" style="color: #ffff;">SERVICIOS</li>
+            <LI style="color: #ffff;">CONTACTO</LI>
+        </ul>
+    </nav>
+    
+    <section>
+        <!-- Methood GET pasa los datos por la url, atravez de los parametros// Method POST pasa los datos de fornma interna (no se ven) -->
+        <form action="datos.php" method="post">
+        <!-- seccion de marco de formulario -->
+        <fieldset>
+            <!-- Seccion de ingreso de nombre -->
+            <label>Nombre Completo</label>
+            <input type="text" name="nombre" placeholder="Ingrese su nombre completo" required>
+            <br><br>
+
+            <!-- seccion de Email -->
+            <label>E-mail</label>
+            <input type="email" name="email" placeholder="Ingrese su Email" required>
+            <br><br>
+
+            <!-- seccion de contraseña -->
+            <label>Contraseña</label>
+            <input type="password" name="contraseña" placeholder="Ingrese su contraseña" required>
+            <br><br>
+
+                <!-- seccion de hobbies -->
+                <label>Selecciona tus hobbies</label>
+                <br>
+                    <input type="checkbox" name="cine">Cine<br>
+                    <input type="checkbox" name="lectura">lectura<br>
+                    <input type="checkbox" name="deporte">Deporte<br>
+                <br><br>
+
+                <!-- estado civil -->
+                <label>Estado civil</label>
+                <br>
+                    <input type="radio" name="estcivil" value="casado">Casado(a)
+                    <input type="radio" name="estcivil" value="soltero">Soltero(a)
+                    <input type="radio" name="estcivil" value="viudo">Viudo(a)
+                <br><br>
+
+                <!-- seleccionar opcion lista -->
+                <label>Programas Tecnicos</label>
+                <select name="select">
+                    <option>Seleccione un Programa...</option>
+                    <option>Sistemas</option>
+                    <option>Diseño Grafico</option>
+                    <option>Contabilidad</option>
+                </select>
+                <br><br>
+                <label>Tu comentario:</label>
+                <br>
+                    <textarea name="mensaje" cols="40" rows="5"></textarea>
+        </fieldset>
+        <br><br>
+        <!-- Seccion de botones formulario submit: enviar datos cancel: borra datos ingresados -->
+        <button type="submit">Enviar</button>
+        <button type="reset">Cancelar</button>
+        <br><br>
+        </form>
+    </section>
+    <!-- Seccion pie de pagina -->
+    <footer>
+        Derechos Reservados &copy;2022&#64;NOMBRE STD  
+    </footer>
+</body>
+</html>
